@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="FAQ" />
+    <ScrollView>
+        <StackLayout class="page-container">
+            <ListView items="{{ faqs }}" class="list-group">
+                <ListView.itemTemplate>
+                    <StackLayout class="card">
+                        <Label text="{{ question }}" class="font-medium text-lg" textWrap="true" />
+                        <Label text="{{ answer }}" class="text-gray-600 mt-2" textWrap="true" />
+                    </StackLayout>
+                </ListView.itemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</Page>

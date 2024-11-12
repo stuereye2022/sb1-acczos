@@ -1,0 +1,15 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Community Calendar" />
+    <GridLayout rows="auto, *" columns="*">
+        <Calendar row="0" class="m-4" {{ calendarEvents }} />
+        <ListView row="1" items="{{ events }}" class="list-group">
+            <ListView.itemTemplate>
+                <StackLayout class="card">
+                    <Label text="{{ title }}" class="font-medium text-lg" />
+                    <Label text="{{ date }}" class="text-gray-600" />
+                    <Label text="{{ description }}" textWrap="true" class="text-gray-600" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

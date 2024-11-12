@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Hairdresser Community">
+        <NavigationButton visibility="collapsed" />
+        <ActionItem ios.position="right" android.position="actionBar" 
+                   text="Menu" tap="{{ onMenu }}" />
+    </ActionBar>
+    <GridLayout rows="*" columns="*">
+        <ListView items="{{ menuItems }}" class="list-group">
+            <ListView.itemTemplate>
+                <StackLayout class="nav-item" tap="{{ onTap }}">
+                    <Label text="{{ title }}" class="text-lg" />
+                    <Label text="{{ description }}" textWrap="true" class="text-sm text-gray-500" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

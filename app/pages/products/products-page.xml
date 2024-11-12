@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="New Products" />
+    <GridLayout rows="*" columns="*">
+        <ListView items="{{ products }}" class="list-group">
+            <ListView.itemTemplate>
+                <GridLayout rows="auto" columns="80, *" class="card">
+                    <Image src="{{ image }}" width="70" height="70" class="rounded-lg" />
+                    <StackLayout col="1" class="ml-2">
+                        <Label text="{{ name }}" class="font-medium text-lg" />
+                        <Label text="{{ description }}" textWrap="true" class="text-gray-600" />
+                        <Label text="{{ '$ ' + price }}" class="text-purple-600 font-bold" />
+                    </StackLayout>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

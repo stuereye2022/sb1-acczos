@@ -1,0 +1,19 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Community Marketplace">
+        <ActionItem ios.position="right" android.position="actionBar" 
+                   text="New Post" tap="{{ onNewPost }}" />
+    </ActionBar>
+    <GridLayout rows="auto, *" columns="*">
+        <SegmentedBar row="0" items="{{ segments }}" selectedIndex="{{ selectedIndex }}" class="m-4" />
+        <ListView row="1" items="{{ posts }}" class="list-group">
+            <ListView.itemTemplate>
+                <StackLayout class="card">
+                    <Label text="{{ type }}" class="text-sm text-purple-600" />
+                    <Label text="{{ title }}" class="font-medium text-lg" />
+                    <Label text="{{ description }}" textWrap="true" class="text-gray-600" />
+                    <Label text="{{ author }}" class="text-sm text-gray-500" />
+                </StackLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </GridLayout>
+</Page>

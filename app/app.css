@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply py-3 px-6 rounded-lg font-medium text-center;
+}
+
+.btn-primary {
+  @apply bg-purple-600 text-white;
+}
+
+.input {
+  @apply border border-gray-300 rounded-lg p-3 mb-4 w-full;
+}
+
+.page-container {
+  @apply p-4;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md p-4 mb-4;
+}
+
+.nav-item {
+  @apply p-4 border-b border-gray-200;
+}

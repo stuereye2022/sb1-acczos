@@ -1,0 +1,12 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Login" />
+    <ScrollView>
+        <StackLayout class="page-container">
+            <Image src="~/images/logo.png" class="h-32 w-32 mb-8 self-center" />
+            <TextField hint="Email" text="{{ email }}" keyboardType="email" class="input" />
+            <TextField hint="Password" text="{{ password }}" secure="true" class="input" />
+            <Button text="Login" tap="{{ onLogin }}" class="btn btn-primary mb-4" />
+            <Button text="Register" tap="{{ onRegister }}" class="btn" />
+        </StackLayout>
+    </ScrollView>
+</Page>

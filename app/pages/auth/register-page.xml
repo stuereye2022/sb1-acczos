@@ -1,0 +1,12 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="Register" />
+    <ScrollView>
+        <StackLayout class="page-container">
+            <TextField hint="Full Name" text="{{ fullName }}" class="input" />
+            <TextField hint="Email" text="{{ email }}" keyboardType="email" class="input" />
+            <TextField hint="Password" text="{{ password }}" secure="true" class="input" />
+            <TextField hint="Confirm Password" text="{{ confirmPassword }}" secure="true" class="input" />
+            <Button text="Register" tap="{{ onRegister }}" class="btn btn-primary" />
+        </StackLayout>
+    </ScrollView>
+</Page>
